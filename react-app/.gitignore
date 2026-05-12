@@ -1,0 +1,79 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- Python / Virtual Environments ---
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+# --- Secrets & Configs ---
+# NEVER push environment variables to GitHub
+.env
+*.env
+
+# --- Apache Airflow (CRITICAL) ---
+# Prevents pushing massive local logs and Airflow's internal SQLite database
+airflow/logs/
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/webserver_config.py
+airflow/airflow-webserver.pid
+
+# --- Large Data Files & ML Models ---
+# We keep the folder structure, but ignore the massive data chunks
+data/landing/*.csv
+data/raw/*.csv
+data/rejected/*.csv
+data/processed/**/*.parquet
+warehouse/*.db
+ml/*.pkl
+
+# --- JavaScript / React ---
+# Handles both 'react' and 'react-app' naming conventions
+react/node_modules/
+react/dist/
+react/build/
+react/.eslintcache
+react-app/node_modules/
+react-app/dist/
+react-app/build/
+
+# --- Logs ---
+*.log
+
+# --- IDEs / Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
